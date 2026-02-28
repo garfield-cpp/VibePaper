@@ -1,218 +1,218 @@
-# Vibe Paper - AI 辅助学术论文写作平台
+# Vibe Paper - AI-Assisted Academic Paper Writing Platform
 
 ![Vibe Paper](figures/vibe_paper_fig.png)
 
-## 项目介绍
+## Project Introduction
 
-Vibe Paper 是一个结合 AI 技术的学术论文写作辅助工具，旨在帮助用户更高效地进行学术论文的撰写、编辑和管理。通过集成先进的 AI 模型，Vibe Paper 提供了全方位的论文写作辅助功能，包括论文生成、文献搜索、代码仓库搜索、图片生成等。
+Vibe Paper is an AI-assisted academic paper writing tool designed to help users more efficiently compose, edit, and manage academic papers. By integrating advanced AI models, Vibe Paper provides comprehensive paper writing assistance features, including paper generation, literature search, code repository search, image generation, and more.
 
-## 核心功能
+## Core Features
 
-### 1. 论文管理系统
-- **用户认证**：支持用户注册、登录和权限管理
-- **论文操作**：创建、编辑、查看和管理学术论文
-- **文件管理**：支持图片上传和管理
+### 1. Paper Management System
+- **User Authentication**: Supports user registration, login, and permission management
+- **Paper Operations**: Create, edit, view, and manage academic papers
+- **File Management**: Supports image upload and management
 
-### 2. AI 辅助写作功能
-- **论文生成**：根据主题和大纲生成学术论文
-- **对话式助手**：与 AI 进行实时对话，获取写作建议
-- **文献搜索**：通过 AI 搜索相关学术文献
-- **代码仓库搜索**：查找相关 GitHub 代码仓库
-- **论文大纲生成**：分析论文内容，生成详细章节目录
-- **图片生成**：根据提示词生成相关图片
-- **论文结构分析**：分析论文结构并提供改进建议
-- **审稿模拟**：模拟期刊审稿过程，提供专业评审意见
-- **数据可视化**：将数据转换为图表
+### 2. AI-Assisted Writing Features
+- **Paper Generation**: Generate academic papers based on topics and outlines
+- **Conversational Assistant**: Have real-time conversations with AI to get writing suggestions
+- **Literature Search**: Search for relevant academic literature through AI
+- **GitHub Repository Search**: Find relevant GitHub code repositories
+- **Paper Outline Generation**: Analyze paper content and generate detailed chapter outlines
+- **Image Generation**: Generate relevant images based on prompts
+- **Paper Structure Analysis**: Analyze paper structure and provide improvement suggestions
+- **Review Simulation**: Simulate journal review process and provide professional review comments
+- **Data Visualization**: Convert data into charts
 
-### 3. 实时协作
-- **多人同时编辑**：支持多用户实时协作编辑论文
-- **操作同步**：实时同步编辑操作，确保所有用户看到相同的内容
-- **光标位置同步**：显示其他用户的光标位置
-- **用户状态管理**：显示当前在线用户，通知用户加入和离开
+### 3. Real-time Collaboration
+- **Multi-user Simultaneous Editing**: Supports multiple users editing papers simultaneously
+- **Operation Synchronization**: Real-time synchronization of editing operations to ensure all users see the same content
+- **Cursor Position Synchronization**: Display other users' cursor positions
+- **User Status Management**: Show current online users, notify users of join and leave events
 
-### 4. 版本控制
-- **版本历史记录**：自动记录每次编辑的版本
-- **版本回滚**：支持回滚到任意历史版本
-- **版本信息**：显示版本号、创建时间、创建者等信息
+### 4. Version Control
+- **Version History Recording**: Automatically record versions of each edit
+- **Version Rollback**: Support rollback to any historical version
+- **Version Information**: Display version number, creation time, creator, and other information
 
-### 5. 多模型支持
-- **OpenAI 模型**：GPT-3.5 Turbo、GPT-4、GPT-4o
-- **阿里云模型**：通义千问 Plus
-- **火山引擎模型**：豆包 Pro
+### 5. Multi-model Support
+- **OpenAI Models**: GPT-3.5 Turbo, GPT-4, GPT-4o
+- **Alibaba Cloud Models**: Tongyi Qianwen Plus
+- **Volcengine Models**: Doubao Pro
 
-## 技术架构
+## Technical Architecture
 
-### 前端
-- **框架**：React + TypeScript
-- **构建工具**：Vite
-- **样式**：TailwindCSS
-- **编辑器**：Monaco Editor（代码编辑器）
-- **数学公式**：MathJax
-- **路由**：React Router
+### Frontend
+- **Framework**: React + TypeScript
+- **Build Tool**: Vite
+- **Styling**: TailwindCSS
+- **Editor**: Monaco Editor (code editor)
+- **Math Formulas**: MathJax
+- **Routing**: React Router
 
-### 后端
-- **框架**：FastAPI（Python）
-- **数据库**：MongoDB
-- **认证**：JWT
-- **AI 集成**：OpenAI API、阿里云 API、火山引擎 API
-- **实时通信**：WebSocket
-- **部署**：支持 Docker 容器化
+### Backend
+- **Framework**: FastAPI (Python)
+- **Database**: MongoDB
+- **Authentication**: JWT
+- **AI Integration**: OpenAI API, Alibaba Cloud API, Volcengine API
+- **Real-time Communication**: WebSocket
+- **Deployment**: Docker containerization support
 
-## 快速开始
+## Quick Start
 
-### 环境要求
+### Environment Requirements
 - Python 3.8+
 - Node.js 16+
-- MongoDB（可选，默认使用内存存储）
+- MongoDB (optional, memory storage used by default)
 
-### 安装步骤
+### Installation Steps
 
-#### 1. 克隆项目
+#### 1. Clone the Project
 ```bash
 git clone https://github.com/yourusername/vibe-paper.git
 cd vibe-paper
 ```
 
-#### 2. 配置环境变量
-编辑 `.env` 文件，设置 API 密钥和其他配置：
+#### 2. Configure Environment Variables
+Edit the `.env` file and set API keys and other configurations:
 
 ```env
-# 模型提供商配置
-MODEL_PROVIDER=openai  # 可选值: openai, aliyun, volcengine
-MODEL_NAME=gpt-3.5-turbo  # 具体模型名称
+# Model provider configuration
+MODEL_PROVIDER=openai  # Optional values: openai, aliyun, volcengine
+MODEL_NAME=gpt-3.5-turbo  # Specific model name
 
-# OpenAI 配置
+# OpenAI configuration
 OPENAI_API_KEY=your-openai-api-key
 
-# 阿里云配置
+# Alibaba Cloud configuration
 ALIYUN_API_KEY=your-aliyun-api-key
 ALIYUN_API_SECRET=your-aliyun-api-secret
 ALIYUN_ENDPOINT=https://ark.cn-beijing.aliyuncs.com/api/v3
 
-# 火山引擎配置
+# Volcengine configuration
 VOLCENGINE_API_KEY=your-volcengine-api-key
 VOLCENGINE_ENDPOINT=https://ark.cn-beijing.volces.com/api/v3
 ```
 
-#### 3. 安装后端依赖
+#### 3. Install Backend Dependencies
 ```bash
 cd server
 pip install -r requirements.txt
 ```
 
-#### 4. 安装前端依赖
+#### 4. Install Frontend Dependencies
 ```bash
 cd ../client
 npm install
 ```
 
-#### 5. 启动服务器
+#### 5. Start the Servers
 ```bash
-# 启动后端服务器
+# Start backend server
 cd ../server
 uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 
-# 启动前端服务器（在另一个终端）
+# Start frontend server (in another terminal)
 cd ../client
 npm run dev
 ```
 
-#### 6. 访问应用
-打开浏览器，访问 `http://localhost:5173` 即可使用 Vibe Paper。
+#### 6. Access the Application
+Open your browser and visit `http://localhost:5173` to use Vibe Paper.
 
-## 使用指南
+## Usage Guide
 
-### 1. 创建论文
-- 点击首页的「创建论文」按钮
-- 输入论文标题和初始内容
-- 点击「保存」按钮创建论文
+### 1. Create a Paper
+- Click the "Create Paper" button on the homepage
+- Enter the paper title and initial content
+- Click the "Save" button to create the paper
 
-### 2. 编辑论文
-- 在编辑器中修改论文内容
-- 使用工具栏插入公式和图片
-- 点击「保存」按钮保存修改
+### 2. Edit a Paper
+- Modify the paper content in the editor
+- Use the toolbar to insert formulas and images
+- Click the "Save" button to save changes
 
-### 3. 使用 AI 助手
-- 在右侧 AI 助手面板中选择模型
-- 输入问题或请求
-- 点击「发送」按钮获取 AI 回复
-- 使用 AI 功能按钮快速执行常用操作
+### 3. Use AI Assistant
+- Select a model in the AI Assistant panel on the right
+- Enter questions or requests
+- Click the "Send" button to get AI responses
+- Use AI function buttons to quickly perform common operations
 
-### 4. 实时协作
-- 点击「协作管理」按钮添加协作者
-- 协作者可以同时编辑论文
-- 查看实时显示的在线用户和光标位置
+### 4. Real-time Collaboration
+- Click the "Collaboration Management" button to add collaborators
+- Collaborators can edit the paper simultaneously
+- View real-time display of online users and cursor positions
 
-### 5. 版本控制
-- 点击「版本管理」按钮查看版本历史
-- 选择历史版本查看详细信息
-- 点击「回滚到此版本」按钮恢复到指定版本
+### 5. Version Control
+- Click the "Version Management" button to view version history
+- Select historical versions to view details
+- Click the "Rollback to this version" button to restore to the specified version
 
-## 项目结构
+## Project Structure
 
 ```
 vibe-paper/
-├── client/            # 前端代码
-│   ├── src/           # 源代码
-│   │   ├── components/  # 组件
-│   │   ├── contexts/    # 上下文
-│   │   ├── pages/       # 页面
-│   │   ├── App.tsx      # 应用入口
-│   │   └── main.tsx     # 主入口
-│   ├── public/        # 静态资源
-│   ├── package.json   # 依赖配置
-│   └── vite.config.ts # Vite 配置
-├── server/            # 后端代码
-│   ├── app/           # 应用代码
-│   │   ├── api/        # API 路由
-│   │   ├── models/     # 数据模型
-│   │   ├── schemas/    # 数据验证
-│   │   └── services/   # 业务逻辑
-│   ├── uploads/        # 上传文件
-│   ├── main.py         # 应用入口
-│   └── requirements.txt # 依赖配置
-├── .env               # 环境变量
-├── docker-compose.yml # Docker 配置
-└── README.md          # 项目说明
+├── client/            # Frontend code
+│   ├── src/           # Source code
+│   │   ├── components/  # Components
+│   │   ├── contexts/    # Contexts
+│   │   ├── pages/       # Pages
+│   │   ├── App.tsx      # Application entry
+│   │   └── main.tsx     # Main entry
+│   ├── public/        # Static resources
+│   ├── package.json   # Dependency configuration
+│   └── vite.config.ts # Vite configuration
+├── server/            # Backend code
+│   ├── app/           # Application code
+│   │   ├── api/        # API routes
+│   │   ├── models/     # Data models
+│   │   ├── schemas/    # Data validation
+│   │   └── services/   # Business logic
+│   ├── uploads/        # Uploaded files
+│   ├── main.py         # Application entry
+│   └── requirements.txt # Dependency configuration
+├── .env               # Environment variables
+├── docker-compose.yml # Docker configuration
+└── README.md          # Project documentation
 ```
 
-## 技术亮点
+## Technical Highlights
 
-1. **多模型支持**：灵活切换不同的 AI 模型提供商
-2. **实时协作**：基于 WebSocket 的实时编辑和光标同步
-3. **版本控制**：完整的版本历史记录和回滚功能
-4. **功能丰富**：提供全方位的学术论文写作辅助功能
-5. **用户友好**：直观的用户界面和流畅的交互体验
-6. **可扩展性**：模块化设计，易于添加新功能
-7. **安全性**：完善的用户认证和权限管理
+1. **Multi-model Support**: Flexible switching between different AI model providers
+2. **Real-time Collaboration**: WebSocket-based real-time editing and cursor synchronization
+3. **Version Control**: Complete version history recording and rollback functionality
+4. **Rich Features**: Provides comprehensive academic paper writing assistance features
+5. **User-friendly**: Intuitive user interface and smooth interaction experience
+6. **Extensibility**: Modular design, easy to add new features
+7. **Security**: Comprehensive user authentication and permission management
 
-## 未来规划
+## Future Plans
 
-- [ ] 支持更多 AI 模型提供商
-- [ ] 实现论文导出为 PDF、Word、LaTeX 等格式
-- [ ] 添加更多专业领域的 AI 模型
-- [ ] 开发移动应用版本
-- [ ] 构建用户社区，分享写作经验和技巧
+- [ ] Support more AI model providers
+- [ ] Implement paper export to PDF, Word, LaTeX, and other formats
+- [ ] Add more domain-specific AI models
+- [ ] Develop mobile application version
+- [ ] Build user community to share writing experiences and tips
 
-## 贡献指南
+## Contribution Guide
 
-欢迎贡献代码、报告问题或提出建议！请按照以下步骤：
+Welcome to contribute code, report issues, or suggest improvements! Please follow these steps:
 
-1. Fork 本项目
-2. 创建特性分支 (`git checkout -b feature/amazing-feature`)
-3. 提交更改 (`git commit -m 'Add some amazing feature'`)
-4. 推送到分支 (`git push origin feature/amazing-feature`)
-5. 打开 Pull Request
+1. Fork this project
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-## 许可证
+## License
 
-本项目采用 MIT 许可证。详见 [LICENSE](LICENSE) 文件。
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## 联系方式
+## Contact
 
-- 项目地址：https://github.com/yourusername/vibe-paper
-- 问题反馈：https://github.com/yourusername/vibe-paper/issues
+- Project Address: https://github.com/yourusername/vibe-paper
+- Issue Feedback: https://github.com/yourusername/vibe-paper/issues
 
 ---
 
-感谢使用 Vibe Paper！希望它能帮助您更高效地完成学术论文写作。
+Thank you for using Vibe Paper! We hope it helps you complete your academic paper writing more efficiently.
