@@ -1,6 +1,6 @@
 # Vibe Paper - AI 辅助学术论文写作平台
 
-![Vibe Paper](https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=A%20modern%20academic%20paper%20writing%20platform%20with%20AI%20assistance%2C%20showing%20a%20collaborative%20editing%20interface%20with%20multiple%20users%20working%20on%20a%20paper%20together%2C%20with%20AI%20suggestions%20and%20version%20control%20features%2C%20professional%20UI%20design%2C%20blue%20and%20white%20color%20scheme&image_size=landscape_16_9)
+![Vibe Paper](figures/vibe_paper_fig.png)
 
 ## 项目介绍
 
