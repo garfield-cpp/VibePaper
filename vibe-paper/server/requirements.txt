@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pydantic
+pymongo
+python-jose[cryptography]
+python-multipart
+openai
+python-dotenv
+requests
